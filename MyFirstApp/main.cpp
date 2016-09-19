@@ -10,8 +10,13 @@
 
 using namespace std;
 
+struct Vector{
+    float x, y, z;
+};
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Vector v;
+    v.x = 20, v.y = 30, v.z = 10;
+    cout << "s-space in " << v.x << ", " << v.y << ", " << v.z << endl;
     return 0;
 }
