@@ -30,5 +30,10 @@ int main(int argc, const char * argv[]) {
     ptrP -> position.x += 30, ptrP -> position.y -= 10;
     
     cout << p.name << ", " << p.hp << ", x:" << p.position.x << ", y:" << p.position.y << ", z:" << p.position.z << endl;
+    
+    int a = 10;
+    int *ptrA = 0;
+    ptrA = &a;
+    cout << *ptrA << endl;
     return 0;
 }
