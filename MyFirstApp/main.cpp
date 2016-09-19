@@ -14,9 +14,21 @@ struct Vector{
     float x, y, z;
 };
 
+struct Player {
+    string name;
+    int hp;
+    Vector position;
+};
+
 int main(int argc, const char * argv[]) {
-    Vector v;
-    v.x = 20, v.y = 30, v.z = 10;
-    cout << "s-space in " << v.x << ", " << v.y << ", " << v.z << endl;
+    Player p;
+    p.name = "Robin", p.hp = 100, p.position.x = 10, p.position.y = 20, p.position.z = 30;
+    
+    Player *ptrP;
+    ptrP = &p;
+    ptrP -> hp -= 30;
+    ptrP -> position.x += 30, ptrP -> position.y -= 10;
+    
+    cout << p.name << ", " << p.hp << ", x:" << p.position.x << ", y:" << p.position.y << ", z:" << p.position.z << endl;
     return 0;
 }
